@@ -277,6 +277,7 @@
 
           <div class="entry-meta pkg">
             <a href="{Permalink}">{TimeAgo}</a>
+            {block:HasTags}{block:Tags}| <a href="{TagURL}">{Tag}</a> {/block:Tags}{/block:HasTags}
           </div>
           <div class="entry-footer">
             {block:IndexPage}
@@ -295,7 +296,7 @@
       {/block:Posts}
 
       {block:Pagination}
-    <div class="pager-bottom pager-entries pager content-nav">
+      <div class="pager-bottom pager-entries pager content-nav">
         <div class="pager-inner">
           {block:PreviousPage}
           <span class="pager-left">
