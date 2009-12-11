@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="{MetaDescription}" />
+
+	<link rel="alternate" type="application/rss+xml" title="Posts on '{Title}' (RSS 2.0)" href="{RSS}" />
+
+	<title>{Title}</title>
+
+	<link rel="stylesheet" href="http://leahculver.typepad.com/awesome/styles.css?v=2" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://static.typepad.com/.shared:v44.12:typepad:en_us/css/app/connect-follow-button.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://static.typepad.com/.shared/themes/common/print.css" type="text/css" media="print" />
+  
+  <!-- DEFAULT COLORS -->
+  <meta name="image:Banner" content="http://leahculver.typepad.com/.shared/themes/jim/chroma/bg-scout.jpg"/>
+  <meta name="color:Sidebar" content="#2B4C13"/>
+  <meta name="color:Background" content="#3c6a1b"/>
+  <meta name="color:Footer" content="#569826"/>
+  <meta name="color:Text" content="#9ac17d"/>
+
+  <style type="text/css">
+
+  /* Theme - Custom Banner */
+  #banner {
+      background-image: url("{image:Banner}");
+  }
+
+  /* Theme - Custom Colors */
+  
+  /* darkest */
+  #wrapper {
+      border-color: {color:Sidebar};
+  }
+  #footer,
+  .module {
+      background: {color:Sidebar};
+  }
+  #comment-author, #comment-email, #comment-url {
+      border-left: 1px solid {color:Sidebar};
+      border-top: 1px solid {color:Sidebar};
+  }
+  .content-nav-prev a,
+  .content-nav-next a,
+  .pager-bottom .pager-left a,
+  .pager-bottom .pager-right a {
+      background: {color:Sidebar};
+  }
+  .content-header {
+      background: {color:Sidebar};
+  }
+
+  /* base */
+  body {
+  	background-color: {color:Background};
+  }
+  #comment-author, #comment-email, #comment-url, .entry-footer-feedback a span,
+  .recently-favorited li {
+      background: {color:Background};
+  }
+  .entry-footer-individual .entry-footer-feedback,
+  .entry-footer-individual .recently-favorited,
+  .comments {
+      border-bottom: 1px solid {color:Background};
+  }
+  .module-recent-comments-mb li {
+      border-bottom: 1px dotted {color:Background};
+  }
+  .module-recent-comments-mb .separator {
+      color: {color:Background};
+  }
+  .module-profilefollowing .userinfo,
+  .module-elsewhere .module-content .module-list-item a span.elsewhere-servicename-account {
+      border-color: {color:Background};
+  }
+
+  /* lighter */
+  .entry-footer {
+      background: {color:Footer};
+  }
+
+  /* lightest */
+  .comment-form #comments-open-data .grayText,
+  .content-nav-label,
+  .user-following,
+  .user-followers a,
+  .module-profilefollowing .userinfo-elsewhere h3 {
+      color: {color:Text};
+  }
+  #comment-author, #comment-email, #comment-url {
+      border-bottom: 1px solid {color:Text};
+      border-right: 1px solid {color:Text};
+  }
+  .module-recent-comments-mb .comment-content-info {
+      color: {color:Text};
+  }
+  .module-recent-comments-mb .comment-content-info a {
+      color: {color:Text};
+  }
+  .module-profilefollowing .view-all a,
+  .module-elsewhere .module-content .module-list-item a span.elsewhere-servicename-account {
+      color: {color:Text};
+  }
+  
+  /* corrections to css for tumblr */
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  #follow-display {
+    width: 80px;
+    height: 16px;
+    padding: 4px 10px;
+  }
+  .module-profilefollowing .userinfo {
+    border: none;
+    padding-bottom: 0;
+  }
+  .user-following {
+    text-align: left;
+  }
+  .entry-footer-feedback li {
+    width: auto;
+  }
+  .recently-favorited ol {
+    padding: 0;
+  }
+  .recently-favorited li {
+    float: none;
+    width: auto;
+    padding: 5px;
+  }
+  .recently-favorited li a {
+    display: inline;
+    float: none;
+    width: auto;
+    padding: 0;
+  }
+  .recently-favorited li img {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 16px;
+    width: 16px;
+    padding: 0;
+  }
+  span.action {
+    display: inline;
+  }
+  ul.chat {
+    list-style: none;
+    padding: 0;
+  }
+  ul.chat .label {
+    color: #888888;
+    font-weight: bold;
+  }
+
+  </style>
+
+</head>
+
+<body class="layout-two-column-left-mb">
+
+<div id="container">
+  <div id="wrapper">
+<div id="container-inner">
+			
+<!-- banner -->
+<div id="banner">
+	<div id="banner-inner" class="pkg">	        
+		<h1 id="banner-header"><a href="/" accesskey="1">{Title}</a></h1>
+		<h2 id="banner-description">{Description}</h2>
+		<div id="banner-screen"></div>
+	</div>
+	<div id="banner-bg"><a href="/" accesskey="1">Home</a></div>
+</div>
+
+<div id="pagebody">
+  <div id="pagebody-inner">
+    <div id="alpha">
+      <div id="alpha-inner">
+        <!-- entry list sticky -->
+        {block:Posts}
+        <div class="entry-author entry-type-post entry" id="entry-{PostID}">
+
+        {block:Text}
+          {block:Title}
+          <h3 class="entry-header">
+            <a href="{Permalink}">{Title}</a>
+          </h3>
+          <div class="entry-has-title">
+          {/block:Title}
+            <div class="entry-content">
+              <div class="entry-body">
+                {Body}
+              </div>
+            </div>
+          {block:Title}
+          </div>
+          {/block:Title}
+  		  {/block:Text}
+
+  		  {block:Photo}
+  		    <div class="entry-content">
+            <div class="entry-body">
+              <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+              {block:Caption}<p>{Caption}</p>{/block:Caption}
+            </div>
+          </div>
+  		  {/block:Photo}
+
+  		  {block:Quote}
+  		    <div class="entry-content">
+            <div class="entry-body">
+              <blockquote>{Quote}</blockquote>
+              {block:Source}<p><small>{Source}</small></p>{/block:Source}
+            </div>
+          </div>
+        {/block:Quote}
+
+        {block:Link}
+          <h3 class="entry-header">
+            <a href="{URL}" {Target}>{Name}</a>
+          </h3>
+          {block:Description}
+          <div class="entry-has-title">
+            <div class="entry-content">
+              <div class="entry-body">
+                {Description}
+              </div>
+            </div>
+          </div>
+          {/block:Description}
+        {/block:Link}
+
+        {block:Chat}
+          {block:Title}
+          <h3 class="entry-header">
+            <a href="{Permalink}">{Title}</a>
+          </h3>
+          <div class="entry-has-title">
+          {/block:Title}
+            <div class="entry-content">
+              <div class="entry-body">
+                <ul class="chat">
+                  {block:Lines}
+                  <li class="{Alt} user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label}{Line}</li>
+                  {/block:Lines}
+                </ul>
+              </div>
+            </div>
+          {block:Title}
+          </div>
+          {/block:Title}
+        {/block:Chat}
+        
+        {block:Audio}
+          <div class="entry-content">
+            <div class="entry-body">
+              {AudioPlayerGrey}
+              {block:Caption}<p>{Caption}</p>{/block:Caption}
+            </div>
+          </div>
+        {/block:Audio}
+
+        {block:Video}
+          <div class="entry-content">
+            <div class="entry-body">
+              {Video-500}
+              {block:Caption}<p>{Caption}</p>{/block:Caption}
+            </div>
+          </div>
+        {/block:Video}
+
+  		    <div class="entry-meta pkg">
+      	    <a href="{Permalink}">{TimeAgo}</a>
+          </div>
+  		    <div class="entry-footer">
+  		      {block:IndexPage}
+            <ul class="entry-footer-feedback pkg">
+              <li><a href="{Permalink}" class="entry-footer-comment">Feedback <span>{NoteCount}</span></a></li>
+            </ul>
+            {/block:IndexPage}
+            {block:PostNotes}
+            <div class="recently-favorited pkg">
+              <h3 class="comments-header">Feedback</h3>
+              {PostNotes}
+            </div>
+            {/block:PostNotes}
+  		    </div>
+  		  </div>
+      {/block:Posts}
+      
+      {block:Pagination}
+			<div class="pager-bottom pager-entries pager content-nav">
+		    <div class="pager-inner">
+          {block:PreviousPage}
+          <span class="pager-left">
+				    <a href="{PreviousPage}"><span class="chevron">&#171;</span>
+				    <span class="pager-label">Previous</span></a>
+          </span>
+          {/block:PreviousPage}
+          <span class="separator">|</span>
+          {block:NextPage}
+          <span class="pager-right">
+            <a href="{NextPage}"><span class="pager-label">Next</span>
+            <span class="chevron">&#187;</span></a>
+          </span>
+          {/block:NextPage}
+		    </div>
+      </div>
+      {/block:Pagination}
+      
+      {block:PermalinkPagination}
+			<div class="pager-bottom pager-entries pager content-nav">
+		    <div class="pager-inner">
+          {block:PreviousPost}
+          <span class="pager-left">
+				    <a href="{PreviousPost}"><span class="chevron">&#171;</span>
+				    <span class="pager-label">Previous post</span></a>
+          </span>
+          {/block:PreviousPost}
+          <span class="separator">|</span>
+          {block:NextPost}
+          <span class="pager-right">
+            <a href="{NextPost}"><span class="pager-label">Next post</span>
+            <span class="chevron">&#187;</span></a>
+          </span>
+          {/block:NextPost}
+		    </div>
+      </div>
+      {/block:PermalinkPagination}
+
+    </div>
+  </div>
+
+<!-- sidebar -->
+  <div id="beta">
+    <div id="beta-inner">
+		  <div class="module-profilefollowing module">
+		    <div class="module-content">
+		      <div class="userinfo pkg"> 
+            <div class="userinfo-userpic">
+              <img src="{PortraitURL-64}" width="50" height="50" class="userpic" />
+            </div> 
+            <div class="userinfo-username"> 
+              <h3><a href="/" style="text-decoration: none;">{Name}</a></h3>
+              <a id="follow-display" class="follow-display follow-action" href="http://www.tumblr.com/follow/{Name}">Follow</a>
+            </div> 
+          </div>
+          {block:Following}
+          <div class="follow-data pkg">
+            <div id="user-following" class="user-following pkg">
+              <div class="user-contacts user-has-contacts">
+                Following
+              </div>
+            </div>
+          </div>
+          {/block:Following}
+        </div>
+        {block:Following}
+        <div class="module-list pkg">
+          {block:Followed}
+          <div class="module-list-item"><a href="{FollowedURL}" target="_parent"><img src="{FollowedPortraitURL-24}" alt="{FollowedName}" title="{FollowedName}" class="userpic" /></a></div>    
+          {/block:Followed}
+        </div>
+        {/block:Following}
+      </div>
+<!-- sidebar -->
+
+				      </div>
+				    </div>
+		      </div>
+		    </div>			
+		  </div>
+    </div>
+	</div>
+
+  <div id="footer">
+    <div id="footer-inner">
+      <ul>
+        <li class="footer-link-syndicate"><a href="{RSS}">Subscribe to this blog's feed</a></li>
+        <li class="footer-link-poweredby"><a href="http://www.typepad.com">Get this design on TypePad</a></li>
+      </ul>
+    </div>
+  </div>
+</html>
