@@ -1,18 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" id="sixapart-standard">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="description" content="{MetaDescription}" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="{MetaDescription}" />
 
-	<link rel="alternate" type="application/rss+xml" title="Posts on '{Title}' (RSS 2.0)" href="{RSS}" />
+  <link rel="alternate" type="application/rss+xml" title="Posts on '{Title}' (RSS 2.0)" href="{RSS}" />
 
-	<title>{Title}</title>
+  <title>{Title}</title>
 
-	<link rel="stylesheet" href="http://leahculver.typepad.com/awesome/styles.css?v=2" type="text/css" media="screen" />
-	<link rel="stylesheet" href="http://static.typepad.com/.shared:v44.12:typepad:en_us/css/app/connect-follow-button.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://leahculver.typepad.com/awesome/styles.css?v=2" type="text/css" media="screen" />
+  <link rel="stylesheet" href="http://static.typepad.com/.shared:v44.12:typepad:en_us/css/app/connect-follow-button.css" type="text/css" media="screen" />
   <link rel="stylesheet" href="http://static.typepad.com/.shared/themes/common/print.css" type="text/css" media="print" />
-  
+
   <!-- DEFAULT COLORS -->
   <meta name="image:Banner" content="http://leahculver.typepad.com/.shared/themes/jim/chroma/bg-scout.jpg"/>
   <meta name="color:Sidebar" content="#2B4C13"/>
@@ -28,7 +27,7 @@
   }
 
   /* Theme - Custom Colors */
-  
+
   /* darkest */
   #wrapper {
       border-color: {color:Sidebar};
@@ -168,15 +167,15 @@
 <div id="container">
   <div id="wrapper">
 <div id="container-inner">
-			
+
 <!-- banner -->
 <div id="banner">
-	<div id="banner-inner" class="pkg">	        
-		<h1 id="banner-header"><a href="/" accesskey="1">{Title}</a></h1>
-		<h2 id="banner-description">{Description}</h2>
-		<div id="banner-screen"></div>
-	</div>
-	<div id="banner-bg"><a href="/" accesskey="1">Home</a></div>
+  <div id="banner-inner" class="pkg">
+    <h1 id="banner-header"><a href="/" accesskey="1">{Title}</a></h1>
+    <h2 id="banner-description">{Description}</h2>
+    <div id="banner-screen"></div>
+  </div>
+  <div id="banner-bg"><a href="/" accesskey="1">Home</a></div>
 </div>
 
 <div id="pagebody">
@@ -202,19 +201,19 @@
           {block:Title}
           </div>
           {/block:Title}
-  		  {/block:Text}
+      {/block:Text}
 
-  		  {block:Photo}
-  		    <div class="entry-content">
+        {block:Photo}
+          <div class="entry-content">
             <div class="entry-body">
               <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
               {block:Caption}<p>{Caption}</p>{/block:Caption}
             </div>
           </div>
-  		  {/block:Photo}
+        {/block:Photo}
 
-  		  {block:Quote}
-  		    <div class="entry-content">
+        {block:Quote}
+          <div class="entry-content">
             <div class="entry-body">
               <blockquote>{Quote}</blockquote>
               {block:Source}<p><small>{Source}</small></p>{/block:Source}
@@ -257,7 +256,7 @@
           </div>
           {/block:Title}
         {/block:Chat}
-        
+
         {block:Audio}
           <div class="entry-content">
             <div class="entry-body">
@@ -276,11 +275,11 @@
           </div>
         {/block:Video}
 
-  		    <div class="entry-meta pkg">
-      	    <a href="{Permalink}">{TimeAgo}</a>
+          <div class="entry-meta pkg">
+            <a href="{Permalink}">{TimeAgo}</a>
           </div>
-  		    <div class="entry-footer">
-  		      {block:IndexPage}
+          <div class="entry-footer">
+            {block:IndexPage}
             <ul class="entry-footer-feedback pkg">
               <li><a href="{Permalink}" class="entry-footer-comment">Feedback <span>{NoteCount}</span></a></li>
             </ul>
@@ -291,17 +290,17 @@
               {PostNotes}
             </div>
             {/block:PostNotes}
-  		    </div>
-  		  </div>
+          </div>
+        </div>
       {/block:Posts}
-      
+
       {block:Pagination}
-			<div class="pager-bottom pager-entries pager content-nav">
-		    <div class="pager-inner">
+    <div class="pager-bottom pager-entries pager content-nav">
+        <div class="pager-inner">
           {block:PreviousPage}
           <span class="pager-left">
-				    <a href="{PreviousPage}"><span class="chevron">&#171;</span>
-				    <span class="pager-label">Previous</span></a>
+            <a href="{PreviousPage}"><span class="chevron">&#171;</span>
+            <span class="pager-label">Previous</span></a>
           </span>
           {/block:PreviousPage}
           <span class="separator">|</span>
@@ -311,17 +310,17 @@
             <span class="chevron">&#187;</span></a>
           </span>
           {/block:NextPage}
-		    </div>
+        </div>
       </div>
       {/block:Pagination}
-      
+
       {block:PermalinkPagination}
-			<div class="pager-bottom pager-entries pager content-nav">
-		    <div class="pager-inner">
+      <div class="pager-bottom pager-entries pager content-nav">
+        <div class="pager-inner">
           {block:PreviousPost}
           <span class="pager-left">
-				    <a href="{PreviousPost}"><span class="chevron">&#171;</span>
-				    <span class="pager-label">Previous post</span></a>
+            <a href="{PreviousPost}"><span class="chevron">&#171;</span>
+          <span class="pager-label">Previous post</span></a>
           </span>
           {/block:PreviousPost}
           <span class="separator">|</span>
@@ -331,7 +330,7 @@
             <span class="chevron">&#187;</span></a>
           </span>
           {/block:NextPost}
-		    </div>
+        </div>
       </div>
       {/block:PermalinkPagination}
 
@@ -341,9 +340,9 @@
 <!-- sidebar -->
   <div id="beta">
     <div id="beta-inner">
-		  <div class="module-profilefollowing module">
-		    <div class="module-content">
-		      <div class="userinfo pkg"> 
+      <div class="module-profilefollowing module">
+        <div class="module-content">
+          <div class="userinfo pkg"> 
             <div class="userinfo-userpic">
               <img src="{PortraitURL-64}" width="50" height="50" class="userpic" />
             </div> 
@@ -365,20 +364,20 @@
         {block:Following}
         <div class="module-list pkg">
           {block:Followed}
-          <div class="module-list-item"><a href="{FollowedURL}" target="_parent"><img src="{FollowedPortraitURL-24}" alt="{FollowedName}" title="{FollowedName}" class="userpic" /></a></div>    
+          <div class="module-list-item"><a href="{FollowedURL}" target="_parent"><img src="{FollowedPortraitURL-24}" alt="{FollowedName}" title="{FollowedName}" class="userpic" /></a></div>
           {/block:Followed}
         </div>
         {/block:Following}
       </div>
 <!-- sidebar -->
 
-				      </div>
-				    </div>
-		      </div>
-		    </div>			
-		  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-	</div>
+  </div>
 
   <div id="footer">
     <div id="footer-inner">
